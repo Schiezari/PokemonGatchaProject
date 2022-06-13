@@ -1,0 +1,6 @@
+flask
+kafka
+confluent-kafka
+flask_sqlalchemy
+pyodbc
+flask_login

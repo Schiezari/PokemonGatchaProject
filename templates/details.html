@@ -1,0 +1,53 @@
+<div class="column-6 push-1 text-start">
+	<div class="pokedex-pokemon-profile">
+		<div>
+			<img class="profile-images" src="/static/official-art/{{ pokemon.id }}.png" alt="{{ pokemon.name }}">
+		</div>
+	</div>
+</div>
+<div class="column-6 push-7">
+	<div class="pokedex-pokemon-details-right">
+		<p class="text-info-detail">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+	</div>
+	<div>
+		<div class="pokedex-pokemon-details-card color-lightblue" style="min-height: 225px;">
+			<div class="column-7">
+				<ul>
+					<li>
+						<span class="attribute-title">Height</span>
+						<span class="attribute-value">{{ pokemon.height/10 }} m</span>
+					</li>
+					<li>
+						<span class="attribute-title">Weight</span>
+						<span class="attribute-value">{{ pokemon.weight/10 }} kg</span>
+					</li>
+				</ul>
+			</div>
+			<div class="column-7 push-7">
+				<ul>
+					<li>
+						<span class="attribute-title">Ability</span>
+						<span class="attribute-value">{{ pokemon.ability | capitalize}}</span>
+					</li>
+					<li>
+						<span class="attribute-title">Exp</span>
+						<span class="attribute-value">{{ pokemon.exp }}</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="pokedex-pokemon-attributes text-start">
+		<h3 class="pokedex-pokemon-attributes-h3">Type</h3>
+		<ul>
+			<li class="background-color-{{ pokemon.first_type }}">
+				<span>{{ pokemon.first_type | capitalize}}</span>
+			</li>
+			{% if pokemon.second_type %}
+				<li class="background-color-{{ pokemon.second_type }}" style="margin-left: 1.5625%;margin-right: 1.5625%;">
+					<span>{{ pokemon.second_type | capitalize}}</span>
+				</li>
+			{% endif %}
+		</ul>
+	</div>
+</div>

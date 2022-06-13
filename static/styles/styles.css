@@ -1,0 +1,357 @@
+ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.form-signin{
+    max-width: 330px;
+    padding: 15px;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.color-lightblue {
+  background-color: #30a7d7;
+  color: #fff;
+}
+
+body {
+  background: #424242 url("../body_bg.png");
+  font-size: 16px;
+  height: 100%;
+}
+
+.background-content {
+    background-color: #fff;
+}
+
+.attribute-title {
+  font-family: "Flexo-Medium",arial,sans-serif;
+  clear: both;
+  color: #fff;
+  float: left;
+  font-size: 100%;
+  margin: 1.25em 0 0 1.25em;
+  text-transform: none;
+  white-space: normal;
+  word-break: break-word;
+  padding: 0;
+  border: 0;
+  font-weight: bold;
+}
+
+.attribute-value {
+  font-family: "Flexo-Medium",arial,sans-serif;
+  clear: both;
+  color: #212121;
+  float: left;
+  font-size: 125%;
+  margin: 0.75em 1.5em 0 1em;
+  white-space: normal;
+  word-break: break-word;
+  padding: 0;
+  border: 0;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.results {
+  float: left;
+  margin-right: -100%;
+  width: 90.5%;
+  margin-left: 7.3%;
+ }
+
+.push-1 {
+  margin-left: 7.2525%;
+}
+
+.push-7 {
+  margin-left: 50.7825%;
+}
+
+.column-6 {
+  float: left;
+  margin-right: -100%;
+  width: 41.96%;
+}
+
+.column-7 {
+  float: left;
+  margin-right: -100%;
+  width: 49.22%;
+}
+
+.column-12 {
+  float: left;
+  margin-right: -100%;
+  width: 350.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+.profile-images {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.text-info-detail {
+  font-family: "Flexo-Medium",arial,sans-serif;
+  font-size: 112.5%;
+  line-height: 150%;
+  text-align: initial;
+}
+
+.pokedex-pokemon-details-card {
+  border-radius: 10px;
+  float: left;
+  min-height: 100px;
+  position: relative;
+  width: 100%;
+}
+
+.pokedex-results .results li {
+  display: block;
+  float: left;
+  position: relative;
+  margin: 0 .78125% 50px;
+  width: 12.4%;
+}
+
+ .pokedex-results .results li .pokemon-info {
+  clear: both;
+  top: -5px;
+  padding-left: 7.2525%;
+}
+
+.pokedex-results .results li .pokemon-info .id {
+  font-family: Verdana, sans-serif;
+  color: #919191;
+  font-size: 80%;
+  padding-top: 2px;
+}
+
+.pokedex-pokemon-pagination-title div span.pokemon-number {
+  color: #616161;
+  margin-left: 0.125em;
+}
+
+.pokedex-pokemon-pagination-title div {
+  font-family: "Flexo-Medium",arial,sans-serif;
+  color: #212121;
+  font-size: 225%;
+  margin-top: 0.5em;
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
+.section.overflow-visible {
+  *zoom: 1;
+  overflow: visible;
+}
+
+.pokedex-results {
+  position: relative;
+  height: auto;
+}
+
+.section {
+  padding: 1em 0;
+}
+
+.pokedex-pokemon-form {
+  overflow: visible;
+  padding-bottom: 50px;
+}
+
+.pokedex-results .results li .pokemon-info h5 {
+  font-family: Verdana, sans-serif;
+  color: #313131;
+  text-transform: none;
+  font-size: 145%;
+  margin-bottom: 5px;
+}
+
+.pokemon-number {
+  color: #616161;
+  margin-left: 0.125em;
+}
+
+.pokedex-pokemon-attributes-h3 {
+  font-family: "Flexo-Medium",arial,sans-serif;
+  clear: both;
+  color: #212121;
+  float: left;
+  margin-top: 1.25em;
+  text-transform: none;
+  width: 100%;
+}
+
+.pokedex-pokemon-attributes ul {
+  float: left;
+  width: 100%;
+}
+
+.pokedex-pokemon-attributes li {
+  float: left;
+  margin-right: -100%;
+  width: 32.29%;
+  border-radius: 5px;
+  margin: 0.5em 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.pokedex-pokemon-attributes li span {
+  font-family: "Flexo-Medium",arial,sans-serif;
+  color: white;
+  display: block;
+  float: left;
+  line-height: 100%;
+  padding: 0.5em 0;
+  width: 100%;
+  font-weight: bold;
+}
+
+h3, h4, h5, h6 {
+  font-size: 130%;
+  line-height: 125%;
+  text-transform: none;
+  margin: 0.5em 0;
+    margin-top: 0.5em;
+  font-family: "Flexo-Medium",arial,sans-serif;
+}
+
+.background-color-grass {
+  background-color: #9bcc50;
+  color: #212121;
+}
+
+.background-color-poison {
+  background-color: #b97fc9;
+  color: #fff;
+}
+
+.background-color-electric {
+  background-color: #eed535;
+  color: #212121;
+}
+
+.background-color-steel {
+  background-color: #9eb7b8;
+  color: #212121;
+}
+
+.background-color-fire {
+  background-color: #fd7d24;
+  color: #fff;
+}
+
+.background-color-fighting {
+  background-color: #d56723;
+  color: #fff;
+}
+
+.background-color-ground {
+  background-color: #f7de3f;
+  color: #212121;
+  background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+}
+
+.background-color-water {
+  background-color: #4592c4;
+  color: #fff;
+}
+
+.background-color-ice {
+  background-color: #51c4e7;
+  color: #212121;
+}
+
+.background-color-rock {
+  background-color: #a38c21;
+  color: #fff;
+}
+
+.background-color-ghost {
+  background-color: #7b62a3;
+  color: #fff;
+}
+
+.background-color-dark {
+  background-color: #707070;
+  color: #fff;
+}
+
+.background-color-psychic {
+  background-color: #f366b9;
+  color: #fff;
+}
+
+.background-color-dragon {
+  background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+    background-color: rgba(0, 0, 0, 0);
+  background-color: #53a4cf;
+  color: #fff;
+}
+
+.background-color-flying {
+  background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+    background-color: rgba(0, 0, 0, 0);
+  background-color: #3dc7ef;
+  color: #212121;
+}
+
+.background-color-fairy {
+  background-color: #fdb9e9;
+  color: #212121;
+}
+
+.background-color-bug {
+  background-color: #729f3f;
+  color: #fff;
+}
+
+.content-block-half-first {
+  margin-right: 3.125%;
+  width: 48.4375%;
+}
+.content-block {
+  float: left;
+  margin: 1em 0 0 0;
+    margin-right: 0px;
+  position: relative;
+}
+
+.button-orange-right {
+  float: right;
+  background-color: #ee6b2f;
+  color: #fff;
+}
+
+.background-color-normal {
+  background-color: #a4acaf;
+  color: #212121;
+}
+
+.bi-square {
+  width: 1em;
+  height: 1em;
+}

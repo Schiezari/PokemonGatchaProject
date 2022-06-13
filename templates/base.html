@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="h-100">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Flask Auth Example</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+        <script type="text/javascript" src="{{ url_for('static',filename='scripts/bootstrap.min.js') }}"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{
+          url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+        <script>$SCRIPT_ROOT = {{ request.script_root|tojson }};</script>
+    </head>
+
+    <body class="d-flex h-100 text-center">
+        <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+            <header class="navbar navbar-expand-lg navbar-dark bd-navbar sticky-top background-content" style="min-height: 4em;">
+                <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap">
+                    <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                        {% if current_user.is_authenticated %}
+                            <object data="/static/avatar.svg" width="40" height="32"></object>
+                            <span class="fs-4">{{ current_user.nick_name }}</span>
+                        {% else %}
+                            <object data="/static/pokemon-icon.svg" width="40" height="32"></object>
+                            <span class="fs-4">Simple header</span>
+                        {% endif %}
+                    </a>
+                    <ul class="nav nav-pills">
+                        {% if current_user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('main.profile') }}">Profile</a></li>
+                        {% else %}
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('main.index') }}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.login') }}">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.signup') }}">Sign Up</a></li>
+                        {% endif %}
+                        {% if current_user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('auth.logout') }}">Logout</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </header>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container background-content text-start">
+    <section class="section pokedex-results overflow-visible">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto text-center">
+                <h1>My Pokémon</h1>
+            </div>
+        </div>
+        <ul class="results" style="height: auto;">
+            {% for pokemon in list_pokemon.items %}
+                <li>
+                    <a href="/pokemon-detail/{{ pokemon.id }}">
+                        <img alt="{{ pokemon.name }}" src="/static/sprites/{{ pokemon.id }}.png" style="box-shadow: 0 0 1.5em #226484;border-radius: 5px;">
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</div>
+<div class="container background-content" style="padding-bottom: 2em;">
+    <!-- Pagination Links-->
+    <div class="text-right">
+        <a href="{{ url_for('catch_pokemon.list_pokemon_by_user', page=list_pokemon.prev_num) }}"
+           class="btn btn-outline-dark
+           {% if list_pokemon.page == 1 %}disabled{% endif %}">
+            &laquo;
+        </a><!-- Loop through the number of pages to display a link for each-->
+        {% for page_num in list_pokemon.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}{% if page_num %}
+    <!-- Check for the active page and set the link to "Active"-->
+                {% if list_pokemon.page == page_num %}
+                <a href="{{ url_for('catch_pokemon.list_pokemon_by_user', page=page_num) }}"
+                   class="btn btn-dark">
+                    {{ page_num }}
+                </a>
+                {% else %}
+                <a href="{{ url_for('catch_pokemon.list_pokemon_by_user', page=page_num) }}"
+                   class="btn btn-outline-dark">
+                    {{ page_num }}
+                </a>
+                {% endif %}
+            {% else %}
+                ...
+            {% endif %}
+        {% endfor %}    <a href="{{ url_for('catch_pokemon.list_pokemon_by_user', page=list_pokemon.next_num) }}"
+           class="btn btn-outline-dark
+           {% if list_pokemon.page == list_pokemon.pages %}disabled{% endif %}">
+            &raquo;
+        </a>
+    </div>
+</div>
+{% endblock %}

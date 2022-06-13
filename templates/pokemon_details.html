@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container background-content">
+    <section>
+        <div class="pokedex-pokemon-pagination-title">
+            <div>{{ pokemon.name | capitalize }} <span class="pokemon-number">Nº{{ '%03d' % pokemon.id }}</span></div>
+        </div>
+    </section>
+    <section class="section pokedex-pokemon-form">
+        <div class="column-12 push-1">
+            <div class="styled-select button-black right"></div>
+        </div>
+    </section>
+    <section>
+        {% include 'details.html' %}
+    </section>
+</div>
+<div class="container background-content">
+    <div class="column-12 push-1">
+        <div class="content-block content-block-half-first"></div>
+        <div style="width: 48.4375%;padding-bottom: 5em;">
+            <a href="/list-pokemon"><button type="button" class="btn btn-primary btn-lg px-4 gap-3">My Pokémon</button></a>
+        </div>
+    </div>
+</div>
+{% endblock %}
